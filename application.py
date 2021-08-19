@@ -8,8 +8,13 @@ from flask import Flask, redirect, url_for, render_template, request, session
 application = Flask(__name__)
 
 @application.route('/')
-def home():
+def start():
     return "This is Start Page"
+
+
+@application.route('/record')
+def record():
+    return render_template("record.html")
 
 
 
