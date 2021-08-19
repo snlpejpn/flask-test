@@ -18,7 +18,7 @@ def record():
 
 if __name__ == "__main__":
  # webサーバーの立ち上げ
-    application.run(use_reloader=False, debug=True)
+    application.run(debug=True)
 
 
 

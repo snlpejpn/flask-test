@@ -4,16 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Recording</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
   </head>
   <body>
 
     <div class="wrapper">
-<!-- 
-      <header>
-        <h1>Web dictaphone</h1>
-      </header> -->
-
       <section class="main-controls">
         <canvas class="visualizer" height="60px"></canvas>
         <div id="buttons">
@@ -27,17 +22,9 @@
 
       </section>
 
-      <!-- //追加 -->
-      <!-- <form id="audio-form" action="{{ url_for('upload') }}" method="POST"> -->
-        <!-- action消してみる -->
       <form id="audio-form" method="POST">
-      <!-- <form id="audio-form" action="localhost:5000/upload" method="POST"> -->
         <button type="submit" id="save-record">Submit</button>
-        
-        <!-- onclick属性を使う -->
-        <!-- <button type="submit" id="save-record" onclick="upload_data()">Submit</button> -->
       </form>
-      <!-- // -->
 
     </div>
 
