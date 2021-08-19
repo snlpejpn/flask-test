@@ -9,7 +9,7 @@ application = Flask(__name__)
 
 @application.route('/')
 def start():
-    return "This is Start Page"
+    return render_template("start.html")
 
 
 @application.route('/record')
