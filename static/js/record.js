@@ -114,32 +114,33 @@ if (navigator.mediaDevices.getUserMedia) {
       }
 
     // /** jQueryを使ったやり方 */
-      // formElem.addEventListener('submit', function(){
-      //   var formData = new FormData();
-      //   formData.append("audio", blob);
-      //   $.ajax({
-      //     type: 'POST',
-      //     url: `${window.origin}/upload`,
-      //     data: formData,
-      //     processData: false,
-      //     contentType: false
-      //   }).done(function(data) {
-      //     console.log(data);
-      //   })
+      formElem.addEventListener('submit', function(){
+        var formData = new FormData();
+        formData.append("audio", blob);
+        $.ajax({
+          type: 'POST',
+          url: `${window.origin}/upload`,
+          data: formData,
+          processData: false,
+          contentType: false
+        }).done(function(data) {
+          console.log(data);
+        })
+      })
 
 
       /**Fetch APIを使ったやり方 */
-    formElem.addEventListener('submit', function(){
-      let formData = new FormData();
-      formData.append('audio', blob);
+    // formElem.addEventListener('submit', function(){
+    //   let formData = new FormData();
+    //   formData.append('audio', blob);
       
-      fetch(`${window.origin}/upload`, {method:"POST", body:formData})
-      .then(response => console.log(response.text()))
-      .catch(err => {
-        alert(err);
-      });
-    });
-
+    //   fetch(`${window.origin}/upload`, {method:"POST", body:formData})
+    //   .then(response => console.log(response.text()))
+    //   .catch(err => {
+    //     alert(err);
+    //   });
+    // });
+    //fetch ここまで
 
       //htmlにonclickとかいてやってみる。// これはonstopの関数の中に入ってるから、呼び出せない. -- >失敗
     //   function upload_data() {
